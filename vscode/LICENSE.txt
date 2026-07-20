@@ -1,0 +1,7 @@
+Proof Light Theme — local preview release
+
+Copyright (c) 2026 Leon. All rights reserved.
+
+No permission is granted to redistribute or publish this package. It is provided
+for personal evaluation and local use only. This notice does not grant rights in
+third-party names, products, or source material referenced by the project.

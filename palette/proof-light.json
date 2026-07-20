@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/proof-palette.schema.json",
+  "name": "Proof Light",
+  "type": "light",
+  "source": {
+    "application": "Codex desktop app",
+    "applicationVersion": "26.715.31925",
+    "asset": "webview/assets/proof-light-C-6lYh5j.js"
+  },
+  "colors": {
+    "editorBackground": "#f5f3ed",
+    "surfaceBackground": "#efede6",
+    "frameBackground": "#d4d1c7",
+    "frameSoftBackground": "#e2dfd5",
+    "foreground": "#2f312d",
+    "secondaryForeground": "#4b4d48",
+    "accent": "#3d755d",
+    "accentMuted": "#dde7e1",
+    "keyword": "#5f6ac2",
+    "constant": "#d3b45b",
+    "comment": "#8b877c",
+    "punctuation": "#7a766d",
+    "error": "#b84a45",
+    "onAccent": "#ffffff"
+  },
+  "notes": {
+    "originalColors": [
+      "#f5f3ed",
+      "#efede6",
+      "#2f312d",
+      "#4b4d48",
+      "#3d755d",
+      "#5f6ac2",
+      "#d3b45b",
+      "#8b877c",
+      "#7a766d"
+    ],
+    "derivedColors": {
+      "frameBackground": "Darker warm neutral chosen to meet the IntelliJ Islands 1.20:1 minimum contrast recommendation against editor and tool-window surfaces.",
+      "frameSoftBackground": "Intermediate warm neutral used for inactive and hover states.",
+      "accentMuted": "Low-contrast selection tint derived from the Proof green accent.",
+      "error": "Warm red added for editor diagnostics because the source theme does not define an error color."
+    }
+  }
+}

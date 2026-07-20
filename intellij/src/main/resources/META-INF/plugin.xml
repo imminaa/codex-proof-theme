@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>dev.leon.proof-light-theme</id>
+    <name>Proof Light Theme</name>
+    <version>0.1.0</version>
+    <vendor>Leon</vendor>
+
+    <description><![CDATA[
+        An unofficial port of the Codex desktop app's warm, editorial Proof Light theme,
+        adapted for the IntelliJ Platform 2025.3+ Islands UI.
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>0.1.0</h3>
+        <ul>
+            <li>Initial Proof Light Islands UI theme.</li>
+            <li>Proof Light editor color scheme.</li>
+        </ul>
+    ]]></change-notes>
+
+    <idea-version since-build="253"/>
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="dev.leon.proof-light-theme.provider"
+                       path="/themes/Proof.theme.json"/>
+    </extensions>
+</idea-plugin>
