@@ -1,8 +1,8 @@
 {
-  "name": "proof-light-theme",
-  "displayName": "Proof Light Theme",
-  "description": "An unofficial port of Codex's warm, editorial Proof Light theme.",
-  "version": "0.1.0",
+  "name": "codex-theme-pack",
+  "displayName": "Codex Theme Pack",
+  "description": "All 43 light and dark appearance themes bundled with Codex.",
+  "version": "0.2.0",
   "publisher": "leon",
   "license": "UNLICENSED",
   "engines": {
@@ -14,20 +14,231 @@
   "keywords": [
     "theme",
     "light theme",
-    "proof",
+    "dark theme",
+    "theme pack",
     "codex",
-    "warm"
+    "openai"
   ],
   "galleryBanner": {
-    "color": "#f5f3ed",
-    "theme": "light"
+    "color": "#111111",
+    "theme": "dark"
   },
   "contributes": {
     "themes": [
       {
-        "label": "Proof Light",
+        "label": "Codex — Ayu Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ayu-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Catppuccin Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/catppuccin-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Catppuccin Light",
+        "uiTheme": "vs",
+        "path": "./themes/catppuccin-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Absolutely Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/absolutely-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Absolutely Light",
+        "uiTheme": "vs",
+        "path": "./themes/absolutely-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Codex Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/codex-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Codex Light",
+        "uiTheme": "vs",
+        "path": "./themes/codex-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Dracula Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dracula-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Everforest Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/everforest-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Everforest Light",
+        "uiTheme": "vs",
+        "path": "./themes/everforest-light-color-theme.json"
+      },
+      {
+        "label": "Codex — GitHub Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/github-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — GitHub Light",
+        "uiTheme": "vs",
+        "path": "./themes/github-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Gruvbox Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gruvbox-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Gruvbox Light",
+        "uiTheme": "vs",
+        "path": "./themes/gruvbox-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Linear Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/linear-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Linear Light",
+        "uiTheme": "vs",
+        "path": "./themes/linear-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Lobster Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lobster-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Material Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/material-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Matrix Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/matrix-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Monokai Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Night Owl Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/night-owl-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Nord Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nord-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Notion Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/notion-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Notion Light",
+        "uiTheme": "vs",
+        "path": "./themes/notion-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Oscurange Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oscurange-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — One Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/one-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — One Light",
+        "uiTheme": "vs",
+        "path": "./themes/one-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Proof Light",
         "uiTheme": "vs",
         "path": "./themes/proof-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Raycast Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/raycast-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Raycast Light",
+        "uiTheme": "vs",
+        "path": "./themes/raycast-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Rose Pine Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/rose-pine-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Rose Pine Light",
+        "uiTheme": "vs",
+        "path": "./themes/rose-pine-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Sentry Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/sentry-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Solarized Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/solarized-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Solarized Light",
+        "uiTheme": "vs",
+        "path": "./themes/solarized-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Tokyo Night Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tokyo-night-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Temple Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/temple-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Vercel Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vercel-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Vercel Light",
+        "uiTheme": "vs",
+        "path": "./themes/vercel-light-color-theme.json"
+      },
+      {
+        "label": "Codex — VS Code Plus Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vscode-plus-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — VS Code Plus Light",
+        "uiTheme": "vs",
+        "path": "./themes/vscode-plus-light-color-theme.json"
+      },
+      {
+        "label": "Codex — Xcode Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/xcode-dark-color-theme.json"
+      },
+      {
+        "label": "Codex — Xcode Light",
+        "uiTheme": "vs",
+        "path": "./themes/xcode-light-color-theme.json"
       }
     ]
   }

@@ -3,8 +3,8 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.11.0"
 }
 
-group = "dev.leon.proof"
-version = "0.1.0"
+group = "dev.leon.codex"
+version = "0.2.0"
 
 repositories {
     mavenCentral()

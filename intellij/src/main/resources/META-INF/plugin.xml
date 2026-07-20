@@ -1,27 +1,61 @@
 <idea-plugin>
-    <id>dev.leon.proof-light-theme</id>
-    <name>Proof Light Theme</name>
-    <version>0.1.0</version>
+    <id>dev.leon.codex-theme-pack</id>
+    <name>Codex Theme Pack</name>
+    <version>0.2.0</version>
     <vendor>Leon</vendor>
-
     <description><![CDATA[
-        An unofficial port of the Codex desktop app's warm, editorial Proof Light theme,
+        An unofficial pack of all 43 light and dark appearance themes bundled with the Codex desktop app,
         adapted for the IntelliJ Platform 2025.3+ Islands UI.
     ]]></description>
-
     <change-notes><![CDATA[
-        <h3>0.1.0</h3>
-        <ul>
-            <li>Initial Proof Light Islands UI theme.</li>
-            <li>Proof Light editor color scheme.</li>
-        </ul>
+        <h3>0.2.0</h3>
+        <p>Expanded to 43 Codex appearance themes with matching editor schemes and Islands UI support.</p>
     ]]></change-notes>
-
     <idea-version since-build="253"/>
     <depends>com.intellij.modules.platform</depends>
-
     <extensions defaultExtensionNs="com.intellij">
-        <themeProvider id="dev.leon.proof-light-theme.provider"
-                       path="/themes/Proof.theme.json"/>
+        <themeProvider id="51708acf-3ede-569e-a34f-830a73c51d68" path="/themes/ayu-dark.theme.json"/>
+        <themeProvider id="4b81090b-c7a6-596b-ae84-205ef21fcd5c" path="/themes/catppuccin-dark.theme.json"/>
+        <themeProvider id="157ed758-2eb4-5ceb-aa8e-eb9a021d9b1f" path="/themes/catppuccin-light.theme.json"/>
+        <themeProvider id="6bcaeb4e-c495-5e50-a620-669b9222d049" path="/themes/absolutely-dark.theme.json"/>
+        <themeProvider id="e9c9296c-95d7-5a9f-af1f-78ab827ba0a9" path="/themes/absolutely-light.theme.json"/>
+        <themeProvider id="5c3a4efd-f641-51e1-a1f6-1e1160ce795a" path="/themes/codex-dark.theme.json"/>
+        <themeProvider id="6ec58730-8b89-5b58-a7b9-b015bea20b94" path="/themes/codex-light.theme.json"/>
+        <themeProvider id="4df51e3e-790b-5fb2-a481-020d6fca14a2" path="/themes/dracula-dark.theme.json"/>
+        <themeProvider id="520db3d4-ad73-513f-a3e2-1b3d54903708" path="/themes/everforest-dark.theme.json"/>
+        <themeProvider id="2694fe90-0725-5181-acde-67e4c6d16e66" path="/themes/everforest-light.theme.json"/>
+        <themeProvider id="2a3f2c0e-27a4-5895-a81b-1ef46a7438ff" path="/themes/github-dark.theme.json"/>
+        <themeProvider id="19445b76-8049-5b73-a5e8-4e47277a6a96" path="/themes/github-light.theme.json"/>
+        <themeProvider id="bf3cc9f0-a835-51cd-acd5-f7c7bd76a611" path="/themes/gruvbox-dark.theme.json"/>
+        <themeProvider id="5aa0ce75-14f4-5665-ae5c-ee0f32681207" path="/themes/gruvbox-light.theme.json"/>
+        <themeProvider id="97a8de3c-931f-5448-ad70-77af6b522ce4" path="/themes/linear-dark.theme.json"/>
+        <themeProvider id="4d396923-13ec-548a-ac42-c2ec6e0fc8e5" path="/themes/linear-light.theme.json"/>
+        <themeProvider id="b60f7637-8477-53f5-af67-8c338fd624af" path="/themes/lobster-dark.theme.json"/>
+        <themeProvider id="d45021ec-b097-54db-a351-f23e13083aa3" path="/themes/material-dark.theme.json"/>
+        <themeProvider id="f564175f-dc78-5f62-adf2-75bf4ae754de" path="/themes/matrix-dark.theme.json"/>
+        <themeProvider id="b2fd3903-2988-5154-a70b-17fbf35e3785" path="/themes/monokai-dark.theme.json"/>
+        <themeProvider id="b6bc8973-d161-55a7-a997-22568a6acd60" path="/themes/night-owl-dark.theme.json"/>
+        <themeProvider id="a13b5d48-584e-54b1-abab-46cc9ca37831" path="/themes/nord-dark.theme.json"/>
+        <themeProvider id="672e6c42-3076-5bda-a4a4-032b8791e69a" path="/themes/notion-dark.theme.json"/>
+        <themeProvider id="7babc008-c0a7-5dcb-a01d-9a7041e71ffa" path="/themes/notion-light.theme.json"/>
+        <themeProvider id="8842f4cf-62bb-54f4-a55f-a94a8066c38a" path="/themes/oscurange-dark.theme.json"/>
+        <themeProvider id="5d60aff6-67da-567f-a789-2538cba63fdb" path="/themes/one-dark.theme.json"/>
+        <themeProvider id="cf522d8d-ce31-5077-ad56-4cad8eb5ce2f" path="/themes/one-light.theme.json"/>
+        <themeProvider id="e83e5c1a-069b-5ca5-a653-5ccc05ccfa9a" path="/themes/proof-light.theme.json"/>
+        <themeProvider id="d65b78c9-c5a3-54c7-a7db-c37b77efd13e" path="/themes/raycast-dark.theme.json"/>
+        <themeProvider id="5cfcf7f8-f7df-5849-a6a6-21851ab6b1a9" path="/themes/raycast-light.theme.json"/>
+        <themeProvider id="d5532a16-1be0-5dc8-a3bf-37f73ade86ab" path="/themes/rose-pine-dark.theme.json"/>
+        <themeProvider id="c2ff743b-21e5-56db-aafe-2596ef149590" path="/themes/rose-pine-light.theme.json"/>
+        <themeProvider id="b7bff3e5-af8b-57fb-abf0-1b00b462ff6c" path="/themes/sentry-dark.theme.json"/>
+        <themeProvider id="1cd4efe2-6c84-5b0b-a654-84e9d92d8eee" path="/themes/solarized-dark.theme.json"/>
+        <themeProvider id="ebef1de3-6c54-5a93-a3de-203f64d92bd9" path="/themes/solarized-light.theme.json"/>
+        <themeProvider id="359f1066-4d9c-59a2-ae9a-91e35f64f4e7" path="/themes/tokyo-night-dark.theme.json"/>
+        <themeProvider id="3fb07072-74fd-536c-a069-f1463934f424" path="/themes/temple-dark.theme.json"/>
+        <themeProvider id="14f52d9b-5697-5d3e-aa5d-25d4b2d7881e" path="/themes/vercel-dark.theme.json"/>
+        <themeProvider id="3818b035-a35e-5e10-ac6c-406277004327" path="/themes/vercel-light.theme.json"/>
+        <themeProvider id="d7aa3191-fa12-53a4-afc9-875f0aaa82d0" path="/themes/vscode-plus-dark.theme.json"/>
+        <themeProvider id="d605fddb-637e-5a44-a0ae-29fba1099e44" path="/themes/vscode-plus-light.theme.json"/>
+        <themeProvider id="9194caf4-82be-5762-a664-35f9f6e0ccf3" path="/themes/xcode-dark.theme.json"/>
+        <themeProvider id="4757c22d-2a1a-553a-acf5-1a634d6d0f8c" path="/themes/xcode-light.theme.json"/>
     </extensions>
 </idea-plugin>

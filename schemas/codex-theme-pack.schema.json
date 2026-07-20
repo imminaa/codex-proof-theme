@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/codex-theme-pack.schema.json",
+  "title": "Codex Theme Pack source palette",
+  "type": "object",
+  "required": ["name", "source", "themes"],
+  "properties": {
+    "name": { "const": "Codex Theme Pack" },
+    "source": {
+      "type": "object",
+      "required": ["application", "applicationVersion", "registryVariantCount"]
+    },
+    "themes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "family",
+          "displayName",
+          "type",
+          "asset",
+          "background",
+          "foreground",
+          "colors",
+          "tokenColors"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "type": { "enum": ["light", "dark"] },
+          "colors": { "type": "object" },
+          "tokenColors": { "type": "array", "minItems": 1 }
+        }
+      }
+    }
+  }
+}

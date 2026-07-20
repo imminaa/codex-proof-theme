@@ -1,1 +1,1 @@
-rootProject.name = "proof-light-theme"
+rootProject.name = "codex-theme-pack"

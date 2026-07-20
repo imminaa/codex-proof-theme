@@ -1,12 +1,13 @@
 {
-  "name": "proof-theme-workspace",
-  "version": "0.1.0",
+  "name": "codex-theme-pack-workspace",
+  "version": "0.2.0",
   "private": true,
-  "description": "Unofficial Proof Light themes for VS Code and IntelliJ Platform IDEs.",
+  "description": "Unofficial Codex appearance theme pack for VS Code and IntelliJ Platform IDEs.",
   "scripts": {
+    "generate": "node scripts/generate-theme-pack.mjs",
     "validate": "node scripts/validate.mjs",
-    "package:vscode": "cd vscode && npx @vscode/vsce package --no-dependencies --allow-missing-repository --out ../dist/proof-light-vscode-0.1.0.vsix",
+    "package:vscode": "node scripts/package-vscode.mjs",
     "package:intellij": "node scripts/package-intellij.mjs",
-    "package": "npm run validate && npm run package:vscode && npm run package:intellij"
+    "package": "npm run generate && npm run validate && npm run package:vscode && npm run package:intellij"
   }
 }

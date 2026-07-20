@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { deflateRawSync } from "node:zlib";
@@ -9,7 +9,7 @@ const workspaceManifest = JSON.parse(await readFile(resolve(repoRoot, "package.j
 const outputPath = resolve(
   repoRoot,
   "dist",
-  `proof-light-intellij-${workspaceManifest.version}.zip`
+  `codex-theme-pack-intellij-${workspaceManifest.version}.zip`
 );
 
 const crcTable = new Uint32Array(256);
@@ -121,32 +121,38 @@ function createZip(entries) {
 }
 
 const manifest = Buffer.from(
-  "Manifest-Version: 1.0\r\nCreated-By: Proof Light theme packager\r\n\r\n",
+  "Manifest-Version: 1.0\r\nCreated-By: Codex Theme Pack packager\r\n\r\n",
   "utf8"
 );
 
+async function collectResources(directory, prefix = "") {
+  const entries = [];
+  const children = await readdir(directory, { withFileTypes: true });
+  children.sort((left, right) => left.name.localeCompare(right.name));
+  for (const child of children) {
+    const name = prefix === "" ? child.name : `${prefix}/${child.name}`;
+    const path = resolve(directory, child.name);
+    if (child.isDirectory()) {
+      entries.push({ name: `${name}/`, data: Buffer.alloc(0) });
+      entries.push(...await collectResources(path, name));
+    } else if (child.isFile()) {
+      entries.push({ name, data: await readFile(path) });
+    }
+  }
+  return entries;
+}
+
+const resourceEntries = await collectResources(resourcesRoot);
 const pluginJar = createZip([
   { name: "META-INF/", data: Buffer.alloc(0) },
   { name: "META-INF/MANIFEST.MF", data: manifest },
-  {
-    name: "META-INF/plugin.xml",
-    data: await readFile(resolve(resourcesRoot, "META-INF", "plugin.xml"))
-  },
-  { name: "themes/", data: Buffer.alloc(0) },
-  {
-    name: "themes/Proof.theme.json",
-    data: await readFile(resolve(resourcesRoot, "themes", "Proof.theme.json"))
-  },
-  {
-    name: "themes/Proof.xml",
-    data: await readFile(resolve(resourcesRoot, "themes", "Proof.xml"))
-  }
+  ...resourceEntries.filter(({ name }) => name !== "META-INF/")
 ]);
 
 const pluginZip = createZip([
-  { name: "proof-light/", data: Buffer.alloc(0) },
-  { name: "proof-light/lib/", data: Buffer.alloc(0) },
-  { name: "proof-light/lib/proof-light.jar", data: pluginJar }
+  { name: "codex-theme-pack/", data: Buffer.alloc(0) },
+  { name: "codex-theme-pack/lib/", data: Buffer.alloc(0) },
+  { name: "codex-theme-pack/lib/codex-theme-pack.jar", data: pluginJar }
 ]);
 
 await mkdir(dirname(outputPath), { recursive: true });
