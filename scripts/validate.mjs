@@ -1,10 +1,12 @@
 import { readFile } from "node:fs/promises";
-import { resolve } from "node:path";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = resolve(import.meta.dirname, "..");
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const readJson = async (path) => JSON.parse(await readFile(resolve(root, path), "utf8"));
 
 const palette = await readJson("palette/proof-light.json");
+const workspaceManifest = await readJson("package.json");
 const vscodeManifest = await readJson("vscode/package.json");
 const vscodeTheme = await readJson("vscode/themes/proof-light-color-theme.json");
 const intellijTheme = await readJson("intellij/src/main/resources/themes/Proof.theme.json");
@@ -42,6 +44,10 @@ check(vscodeTheme.type === "light", "VS Code theme must be light.");
 check(vscodeTheme.colors["editor.background"] === palette.colors.editorBackground, "VS Code editor background drifted from the source palette.");
 check(vscodeTheme.colors["editor.foreground"] === palette.colors.foreground, "VS Code editor foreground drifted from the source palette.");
 check(vscodeTheme.colors["focusBorder"] === palette.colors.accent, "VS Code accent drifted from the source palette.");
+check(
+  workspaceManifest.scripts?.["package:intellij"] === "node scripts/package-intellij.mjs",
+  "IntelliJ packaging must use the cross-platform Node packager."
+);
 
 check(intellijTheme.parentTheme === "Islands Light", "IntelliJ theme must inherit Islands Light.");
 check(intellijTheme.ui.Islands === 1, "IntelliJ theme must opt into Islands rendering.");
@@ -82,5 +88,5 @@ if (failures.length > 0) {
   console.error(failures.map((failure) => `- ${failure}`).join("\n"));
   process.exitCode = 1;
 } else {
-  console.log("Validated Proof palette, VS Code theme, IntelliJ Islands theme, and editor scheme.");
+  console.log("Validated Proof palette, VS Code theme, IntelliJ Islands theme, editor scheme, and cross-platform packager.");
 }

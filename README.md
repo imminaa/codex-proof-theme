@@ -29,16 +29,19 @@ Open **Settings > Plugins**, use the gear menu, choose **Install Plugin from Dis
 Requirements:
 
 - Node.js 18 or newer
-- `jar` and `zip` for the lightweight IntelliJ packager
 
-```bash
+The IntelliJ packager is dependency-free and creates both the plugin JAR and
+install ZIP in Node.js. It does not require Bash, `jar`, or `zip`, so the same
+command works in PowerShell, Command Prompt, and Unix shells.
+
+```console
 npm run validate
 npm run package
 ```
 
 The IntelliJ source also includes a current Gradle IntelliJ Platform 2.x build for development and Marketplace verification:
 
-```bash
+```console
 cd intellij
 gradle buildPlugin
 ```
